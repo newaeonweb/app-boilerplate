@@ -25,6 +25,18 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 # Aditional infos
 
-I added some steroids on this boilerplate
+I added some steroids on this boilerplate like: Routes, Service Workers, Proxy config
+
+## Running App from dist folder
+
+  npm install http-server -g
+
+  cd dist http-server -p 8080
+
+Check http://localhost:8080
+
+
+
+
 
 
