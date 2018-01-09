@@ -9,6 +9,8 @@ declare var $: any;
   styleUrls: ['./motos.component.scss']
 })
 export class MotosComponent implements OnInit {
+  public motos: Object;
+  public searchText: any;
 
   constructor(private motosService: MotosService) { }
 
@@ -16,6 +18,7 @@ export class MotosComponent implements OnInit {
 
     return this.motosService.get().subscribe(
       data => {
+        this.motos = data;
         console.log(data);
       },
       err => {
@@ -25,7 +28,6 @@ export class MotosComponent implements OnInit {
   }
 
   ngOnInit() {
-    $(document).foundation();
     this.getMotos();
   }
 

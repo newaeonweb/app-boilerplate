@@ -1,14 +1,7 @@
-<div class="rows">
-  <div class="columns text-center">
-    <button class="button" data-open="myModal">Add Action</button>
-
-    <div class="large reveal" id="myModal" data-reveal>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h1>My Modal Title</h1>
-      <p>This is the body of my modal</p>
-    </div>
+<div class="container">
+    <input type="text" [(ngModel)]="searchText" placeholder="search text goes here">
+  <div class="card col-lg-4 col-sm-6 col-xs-12" *ngFor="let moto of motos | search: searchText ">
+    {{ moto.nome }}
   </div>
 </div>
 
