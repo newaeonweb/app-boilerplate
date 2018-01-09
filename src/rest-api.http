@@ -1,0 +1,9 @@
+GET https://fipe.parallelum.com.br/api/v1/motos/marcas
+
+### ID MArca, lista modelos
+
+GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos
+
+### ID Marca, ID modelo, Anos de fabricação
+
+GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos/2721/anos

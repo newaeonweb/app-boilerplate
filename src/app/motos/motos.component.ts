@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MotosService } from './motos.service';
 
 declare var $: any;
 
@@ -9,10 +10,23 @@ declare var $: any;
 })
 export class MotosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private motosService: MotosService) { }
+
+  public getMotos () {
+
+    return this.motosService.get().subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log('Something went wrong!' + JSON.stringify(err));
+      }
+    );
+  }
 
   ngOnInit() {
     $(document).foundation();
+    this.getMotos();
   }
 
 }
