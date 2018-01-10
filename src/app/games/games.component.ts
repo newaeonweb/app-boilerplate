@@ -18,8 +18,8 @@ export class GamesComponent implements OnInit {
 
     return this.gamesService.get().subscribe(
       data => {
-        this.gamesList = data;
-        console.log(data);
+        this.gamesList = data['top'];
+        console.log(data['top']);
       },
       err => {
         console.log('Something went wrong!' + JSON.stringify(err));
