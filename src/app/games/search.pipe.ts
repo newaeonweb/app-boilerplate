@@ -13,8 +13,8 @@ export class SearchPipe implements PipeTransform {
     if (input) {
       input = input.toLowerCase();
       return value.filter(function (el: any) {
-        console.log(el.nome);
-          return el.nome.toLowerCase().indexOf(input) > -1;
+        console.log(el.game.name);
+          return el.game.name.toLowerCase().indexOf(input) > -1;
       });
     }
     return value;
