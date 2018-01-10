@@ -10,7 +10,7 @@ declare var $: any;
 })
 export class GamesComponent implements OnInit {
   public gamesList: Object;
-  public searchText: any;
+  public searchText: string;
 
   constructor(private gamesService: GamesService) { }
 

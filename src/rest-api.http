@@ -7,3 +7,9 @@ GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos
 ### ID Marca, ID modelo, Anos de fabricação
 
 GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos/2721/anos
+
+### https://dev.twitch.tv/docs/v5/reference/games
+
+curl -H 'Accept: application/vnd.twitchtv.v5+json' \
+-H 'Client-ID: mxl119qecihacudeg6lmx6m7cf0yqb' \
+-X GET 'https://api.twitch.tv/kraken/games/top'
