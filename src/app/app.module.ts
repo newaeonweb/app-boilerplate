@@ -7,17 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CarsComponent } from './cars/cars.component';
-import { MotosComponent } from './motos/motos.component';
-import { MotosService } from './motos/motos.service';
+import { GamesComponent } from './games/games.component';
+import { GamesService } from './games/games.service';
 import { AppRoutingModule } from './app-routing.module';
-import { SearchPipe } from './motos/search.pipe';
+import { SearchPipe } from './games/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarsComponent,
-    MotosComponent,
+    GamesComponent,
     SearchPipe
   ],
   imports: [
@@ -27,7 +25,7 @@ import { SearchPipe } from './motos/search.pipe';
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     AppRoutingModule
   ],
-  providers: [MotosService],
+  providers: [GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

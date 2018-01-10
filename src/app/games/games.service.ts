@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class MotosService {
+export class GamesService {
   private url: string;
 
   constructor(private http: HttpClient) { }
