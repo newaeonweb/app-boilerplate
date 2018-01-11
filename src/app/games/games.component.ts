@@ -10,6 +10,7 @@ export class GamesComponent implements OnInit {
   public searchText: string;
   public selectedFilter: string;
   public requestError: any;
+  public isLoading = false;
 
   constructor(private gamesService: GamesService) { }
 
@@ -22,6 +23,7 @@ export class GamesComponent implements OnInit {
   }
 
   public getGames () {
+    this.isLoading = true;
     return this.gamesService.get(50).subscribe(
       response => this.handleResponse(response),
       error => this.handleError(error)
@@ -29,11 +31,12 @@ export class GamesComponent implements OnInit {
   }
 
   protected handleResponse (response: any) {
+    this.isLoading = false;
     return this.gamesList = response['top'];
   }
 
   protected handleError (error: any) {
-    console.log(error);
+    this.isLoading = false;
     return this.requestError = error;
   }
 
