@@ -9,7 +9,7 @@ export class GamesService {
 
   get() {
     // this.url = 'https://fipe.parallelum.com.br/api/v1/motos/marcas';
-    this.url = 'https://api.twitch.tv/kraken/games/top?limit=100';
+    this.url = 'https://api.twitch.tv/kraken/games/top?limit=12';
 
     return this.http.get(this.url, {
       headers: new HttpHeaders({'Client-ID': 'mxl119qecihacudeg6lmx6m7cf0yqb'}),
