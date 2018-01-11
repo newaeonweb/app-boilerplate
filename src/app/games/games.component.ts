@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from './games.service';
+import { GameInterface } from './games.interface';
+
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss']
 })
+
 export class GamesComponent implements OnInit {
-  public gamesList: Object;
+  public gamesList: GameInterface[];
   public searchText: string;
   public selectedFilter: string;
   public requestError: any;
