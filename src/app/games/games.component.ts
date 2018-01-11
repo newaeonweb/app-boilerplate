@@ -11,6 +11,7 @@ export class GamesComponent implements OnInit {
   public selectedFilter: string;
   public requestError: any;
   public isLoading = false;
+  public deviceWidth: number;
 
   constructor(private gamesService: GamesService) { }
 
@@ -22,9 +23,20 @@ export class GamesComponent implements OnInit {
     this.selectedFilter = undefined;
   }
 
+  public checkDeviceWidth () {
+    this.deviceWidth = window.screen.width;
+    if (this.deviceWidth >= 992) {
+      return 100;
+    } else if (this.deviceWidth <= 768 && this.deviceWidth >= 576) {
+      return 50;
+    } else {
+      return 25;
+    }
+  }
+
   public getGames () {
     this.isLoading = true;
-    return this.gamesService.get(50).subscribe(
+    return this.gamesService.get(this.checkDeviceWidth ()).subscribe(
       response => this.handleResponse(response),
       error => this.handleError(error)
     );
@@ -41,6 +53,7 @@ export class GamesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.checkDeviceWidth();
     this.getGames();
   }
 
