@@ -9,20 +9,9 @@ export class GamesComponent implements OnInit {
   public gamesList: Object;
   public searchText: string;
   public selectedFilter: string;
+  public requestError: any;
 
   constructor(private gamesService: GamesService) { }
-
-  public getGames () {
-    return this.gamesService.get(50).subscribe(
-      data => {
-        this.gamesList = data['top'];
-        console.log(data['top']);
-      },
-      err => {
-        console.log('Something went wrong!' + JSON.stringify(err));
-      }
-    );
-  }
 
   public filterProperty(property: string): void {
     this.selectedFilter = property;
@@ -30,6 +19,22 @@ export class GamesComponent implements OnInit {
 
   public removeFilter(): void {
     this.selectedFilter = undefined;
+  }
+
+  public getGames () {
+    return this.gamesService.get(50).subscribe(
+      response => this.handleResponse(response),
+      error => this.handleError(error)
+    );
+  }
+
+  protected handleResponse (response: any) {
+    return this.gamesList = response['top'];
+  }
+
+  protected handleError (error: any) {
+    console.log(error);
+    return this.requestError = error;
   }
 
   ngOnInit() {

@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/observable/throw';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable()
 export class GamesService {
@@ -10,7 +14,11 @@ export class GamesService {
   get(limit: number) {
     return this.http.get(this.url + limit, {
       headers: new HttpHeaders({'Client-ID': 'mxl119qecihacudeg6lmx6m7cf0yqb'}),
-    });
+    }).pipe(catchError(error => this.handleError(error)));
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    return Observable.throw(error);
   }
 
 }
