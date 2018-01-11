@@ -3,6 +3,7 @@ import { GamesService } from './games.service';
 import { GameInterface } from './games.interface';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss']

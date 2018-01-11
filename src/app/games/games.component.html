@@ -26,12 +26,12 @@
     <button class="btn btn-outline-primary" (click)="getGames()">Recarregar games</button>
   </div>
   <div class="row mt-3">
-    <div class="col-4 col-md-3 col-lg-2" *ngFor="let item of gamesList | search: searchText | filter: selectedFilter
+    <div class="col col-md-3 col-lg-2" *ngFor="let item of gamesList | search: searchText | filter: selectedFilter
     ">
       <div class="mb-2" >
         <div class="text-center">
           <figure class="figure">
-            <img class="figure-img img-fluid" [src]="item.game.box.medium" [alt]="item.game.name" width="108px">
+            <img class="figure-img" [src]="item.game.box.medium" [alt]="item.game.name" width="100px">
             <figcaption class="figure-caption text-lowercase">{{item.game.name}}</figcaption>
           </figure>
         </div>
