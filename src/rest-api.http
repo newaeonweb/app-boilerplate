@@ -1,13 +1,3 @@
-GET https://fipe.parallelum.com.br/api/v1/motos/marcas
-
-### ID MArca, lista modelos
-
-GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos
-
-### ID Marca, ID modelo, Anos de fabricação
-
-GET https://fipe.parallelum.com.br/api/v1/motos/marcas/77/modelos/2721/anos
-
 ### https://dev.twitch.tv/docs/v5/reference/games
 
 curl -H 'Accept: application/vnd.twitchtv.v5+json' \
@@ -16,4 +6,4 @@ curl -H 'Accept: application/vnd.twitchtv.v5+json' \
 
 ### Detalhes : title, visualizacoes, canais ao vivo, popularidade
 ### Filtro popularidade visualizacoes
-### Mobile : 25 | Tablet : 50 | desktop: 100
+### Mobile : 25 itens | Tablet : 50 itens | desktop: 100 itens
