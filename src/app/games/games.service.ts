@@ -3,18 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class GamesService {
-  private url: string;
+  private url = 'https://api.twitch.tv/kraken/games/top?limit=';
 
   constructor(private http: HttpClient) { }
 
-  get() {
-    // this.url = 'https://fipe.parallelum.com.br/api/v1/motos/marcas';
-    this.url = 'https://api.twitch.tv/kraken/games/top?limit=12';
-
-    return this.http.get(this.url, {
+  get(limit: number) {
+    return this.http.get(this.url + limit, {
       headers: new HttpHeaders({'Client-ID': 'mxl119qecihacudeg6lmx6m7cf0yqb'}),
     });
-
   }
 
 }

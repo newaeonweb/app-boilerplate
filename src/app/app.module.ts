@@ -11,12 +11,14 @@ import { GamesComponent } from './games/games.component';
 import { GamesService } from './games/games.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchPipe } from './games/search.pipe';
+import { FilterPipe } from './games/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesComponent,
-    SearchPipe
+    SearchPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
