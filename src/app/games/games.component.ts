@@ -18,6 +18,11 @@ export class GamesComponent implements OnInit {
 
   constructor(private gamesService: GamesService) { }
 
+  ngOnInit() {
+    this.checkDeviceWidth();
+    this.getGames();
+  }
+
   public filterProperty(property: string): void {
     this.selectedFilter = property;
   }
@@ -54,10 +59,4 @@ export class GamesComponent implements OnInit {
     this.isLoading = false;
     return this.requestError = error;
   }
-
-  ngOnInit() {
-    this.checkDeviceWidth();
-    this.getGames();
-  }
-
 }

@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchPipe } from './games/search.pipe';
 import { FilterPipe } from './games/filter.pipe';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { FilterPipe } from './games/filter.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [GamesService],
   bootstrap: [AppComponent]

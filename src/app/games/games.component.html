@@ -8,7 +8,7 @@
         <p>Filtrar por: </p>
       </div>
       <div class="col-md-10 text-right">
-        <button class="btn btn-light" *ngIf="selectedFilter" (click)="removeFilter()" data-toggle="tooltip" data-placement="top" title="Remover Filtro"> X </button>
+        <button class="btn btn-light" *ngIf="selectedFilter" (click)="removeFilter()" placement="top" ngbTooltip="Remover Filtro"> X </button>
         <button class="btn" [ngClass]="selectedFilter === 'popularity' ? 'btn-secondary' : 'btn-primary'" (click)="filterProperty('popularity')">Popularidade</button>
         <button class="btn" [ngClass]="selectedFilter === 'viewers' ? 'btn-secondary' : 'btn-primary'" (click)="filterProperty('viewers')">Visualizações</button>
       </div>
