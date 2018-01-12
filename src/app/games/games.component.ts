@@ -24,12 +24,17 @@ export class GamesComponent implements OnInit {
     this.getGames();
   }
 
-  public filterProperty(property: string): void {
+  public filterProperty (property: string): void {
     this.selectedFilter = property;
   }
 
-  public removeFilter(): void {
+  public removeFilter (): void {
     this.selectedFilter = undefined;
+  }
+
+  public viewDetail (item: any) {
+    console.log(item);
+    window.localStorage.setItem('game', JSON.stringify({item}));
   }
 
   public checkDeviceWidth () {

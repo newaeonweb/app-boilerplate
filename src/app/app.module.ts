@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
+import { GameDetailComponent } from './games/game-detail.component';
 import { GamesService } from './games/games.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchPipe } from './games/search.pipe';
@@ -19,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     GamesComponent,
+    GameDetailComponent,
     SearchPipe,
     FilterPipe
   ],
