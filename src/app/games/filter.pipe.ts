@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
       if (property === 'popularity') {
         return items.filter((item: any) => item.game.popularity > item.viewers);
       } else if (property === 'viewers') {
-        return items.filter((item: any) => item.game.popularity < item.viewers);
+        return items.filter((item: any) => item.viewers > item.game.popularity);
       } else {
         return items;
       }
