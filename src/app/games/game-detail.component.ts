@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GamesService } from './games.service';
-import { GameInterface } from './games.interface';
 
 @Component({
   moduleId: module.id,
@@ -12,7 +10,7 @@ import { GameInterface } from './games.interface';
 export class GameDetailComponent implements OnInit {
   public game: any;
 
-  constructor(private gamesService: GamesService) { }
+  constructor() { }
 
   ngOnInit() {
     this.getGame();
