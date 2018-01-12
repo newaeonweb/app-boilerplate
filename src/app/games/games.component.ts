@@ -33,7 +33,6 @@ export class GamesComponent implements OnInit {
   }
 
   public viewDetail (item: any) {
-    console.log(item);
     window.localStorage.setItem('game', JSON.stringify({item}));
   }
 
