@@ -7,7 +7,7 @@ import { GamesComponent } from './games/games.component';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/games', pathMatch: 'full' },
+  { path: '', redirectTo: 'games', pathMatch: 'full' },
   { path: 'games', component: GamesComponent }
 
 ];
@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
+      { enableTracing: false }
     )
   ],
   exports: [

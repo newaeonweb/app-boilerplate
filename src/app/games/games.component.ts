@@ -53,6 +53,7 @@ export class GamesComponent implements OnInit {
 
   protected handleResponse (response: any) {
     this.isLoading = false;
+    this.requestError = null;
     return this.gamesList = response['top'];
   }
 
