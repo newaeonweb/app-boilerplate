@@ -1,8 +1,11 @@
+@import './../../scss/project-settings/_variables.scss';
+
 :host {
-  .h1 {
-    font-size: 80em;
+  h1 {
+    color: $red;
   }
 }
+
 
 
 
