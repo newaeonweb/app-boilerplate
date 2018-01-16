@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class GameDetailComponent implements OnInit {
-  public game: any;
+  public detail: any;
 
   constructor() { }
 
@@ -18,7 +18,8 @@ export class GameDetailComponent implements OnInit {
 
   public getGame () {
     const game = JSON.parse(window.localStorage.getItem('game'));
-    this.game = game.item;
+    console.log(game);
+    return this.detail = game;
   }
 
 }
