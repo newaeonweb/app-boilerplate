@@ -18,7 +18,6 @@ export class GameDetailComponent implements OnInit {
 
   public getGame () {
     const game = JSON.parse(window.localStorage.getItem('game'));
-    console.log(game);
     return this.detail = game;
   }
 
