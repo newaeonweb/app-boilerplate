@@ -7,11 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CarsComponent } from './cars/cars.component';
-import { MotosComponent } from './motos/motos.component';
-import { MotosService } from './motos/motos.service';
+import { CarsComponent } from './pages/cars/cars.component';
+import { MotosComponent } from './pages/motos/motos.component';
+import { MotosService } from './pages/motos/motos.service';
 import { AppRoutingModule } from './app-routing.module';
-import { SearchPipe } from './motos/search.pipe';
+import { SearchPipe } from './pages/motos/search.pipe';
 import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({

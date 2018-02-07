@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { CarsComponent } from './cars/cars.component';
-import { MotosComponent } from './motos/motos.component';
+import { CarsComponent } from './pages/cars/cars.component';
+import { MotosComponent } from './pages/motos/motos.component';
 
 
 const appRoutes: Routes = [
