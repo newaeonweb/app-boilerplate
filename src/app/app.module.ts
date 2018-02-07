@@ -12,13 +12,15 @@ import { MotosComponent } from './motos/motos.component';
 import { MotosService } from './motos/motos.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchPipe } from './motos/search.pipe';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsComponent,
     MotosComponent,
-    SearchPipe
+    SearchPipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
