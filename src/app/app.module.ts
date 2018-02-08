@@ -23,7 +23,7 @@ import { HeaderComponent } from './layout/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
